@@ -67,8 +67,6 @@ public class ATM {
                             + "5 - Buy Electricity voucher\n"
                             + "6 - Pay municipal bills"));
                     if(opt2==1){
-                        //Statement st = connection.createStatement();
-                        //int stundN = Integer.parseInt(JOptionPane.showInputDialog("Enter the student number of the account balance you want view"));
                         Statement neww = connection.createStatement();
                         String rrr = "select * from accinfo where accNo =";
                         rrr+=acNum;
@@ -81,9 +79,6 @@ public class ATM {
                     }
                     else if(opt2==2){
                         Statement neww = connection.createStatement();
-                        
-                        //To view descriptions of statements
-                        //Statement a = connection.
                         double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Insert the money/enter the amount you want to deposit"));
                         
                         String rrr = "select * from accinfo where accNo =";
@@ -105,14 +100,10 @@ public class ATM {
                         nws+=acNum;
                         neww.execute(nws);
                        
-                        
-                        //ResultSet t = neww.executeQuery(rrr);
                     }
                     else if(opt2==3){
                         Statement neww = connection.createStatement();
                         
-                        //To view descriptions of statements
-                        //Statement a = connection.
                         double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the amount you wish to withdraw"));
                         
                         withdwals wtdw = new withdwals();
@@ -124,8 +115,6 @@ public class ATM {
                     else if(opt2==4){
                         Statement neww = connection.createStatement();
                         
-                        //To view descriptions of statements
-                        //Statement a = connection.
                         double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the airtime amount you wish to buy"));
                         
                         withdwals wtdw = new withdwals();
@@ -135,9 +124,7 @@ public class ATM {
                     }
                     else if(opt2==5){
                         Statement neww = connection.createStatement();
-                        
-                        //To view descriptions of statements
-                        //Statement a = connection.
+                       
                         double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the amount of electricity voucher you wish to buy"));
                         
                         withdwals wtdw = new withdwals();
@@ -147,8 +134,6 @@ public class ATM {
                     else if(opt2==6){
                         Statement neww = connection.createStatement();
                         
-                        //To view descriptions of statements
-                        //Statement a = connection.
                         double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the amount you wish to pay to your municipal bills"));
                         
                         withdwals wtdw = new withdwals();
