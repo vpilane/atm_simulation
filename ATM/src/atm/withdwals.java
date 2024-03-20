@@ -23,10 +23,7 @@ public class withdwals {
         try {
        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/bank", "root", "");
        Statement neww = connection.createStatement();
-                        
-                        //To view descriptions of statements
-                        //Statement a = connection.
-                        //double dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the amount you wish to withdraw"));
+                        e dpAmt = Double.parseDouble(JOptionPane.showInputDialog(null, "Enter the amount you wish to withdraw"));
                         
                         String rrr = "select * from accinfo where accNo =";
                         rrr+=accontN;
